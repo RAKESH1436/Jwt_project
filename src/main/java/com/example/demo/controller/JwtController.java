@@ -40,7 +40,7 @@ public class JwtController {
 
         UserDetails userDetails = this.cachingUserDetailsService.loadUserByUsername(jwtRequest.getUsername());
         String token = this.jwtHelper.generateToken(userDetails);
-        System.out.println("jwt" + token);
+        System.out.println("JWT" + token);
         return ResponseEntity.ok(new JwtResponse(token));
 
 
